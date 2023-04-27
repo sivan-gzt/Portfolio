@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Solitreo&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    --accent-color: #7ae7e1;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+.styled-background {
+    background-image: url(assets/bg.jpeg);
+    background-color: var(--accent-color);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-side {
+    display: flex;
+}
+
+.right-side ul {
+    padding-right: 1rem;
+    list-style: none;
+    display: flex;
+    gap: clamp(10px, 5vw, 5rem);
+    align-items: center;
+
+}
+
+.right-side li,
+.right-side a {
+    display: inline;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.15rem;
+
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: min(5vw, 50px);
+    padding-left: 0.4rem;
+}
+
+.name-logo {
+    font-family: Solitreo;
+    font-size: 2rem;
+    min-width: max-content;
+}
+
+.hero-profile-picture {
+    border-radius: 50%;
+    background-image: url(images/MRSIVANGAZITCROPPED.jpg);
+    width: 3rem;
+    height: 3rem;
+    background-size: contain;
+    background-repeat: round;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.technologies-container {
+    display: flex;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 620px) {
+
+    html,
+    body {
+        padding: 0;
+    }
+
+    .technologies-container {
+        border: 1px solid red;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .technologies-container>img {
+        min-width: 100px;
+    }
+
+}
+
+@media only screen and (min-width: 621px) {
+    .technologies-container {
+        justify-content: space-between;
+    }
+}
